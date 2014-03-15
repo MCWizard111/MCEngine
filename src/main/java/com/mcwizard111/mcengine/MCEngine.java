@@ -10,9 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by mcwizard111 on 3/13/14.
- */
 public class MCEngine {
     private String title;
     private int width, height;

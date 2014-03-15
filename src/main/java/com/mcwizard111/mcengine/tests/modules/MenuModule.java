@@ -1,13 +1,14 @@
 package com.mcwizard111.mcengine.tests.modules;
 
 import com.mcwizard111.mcengine.Modules.Module;
+import com.mcwizard111.mcengine.tests.gui.GuiButton;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
 
-/**
- * Created by mcwizard111 on 3/14/14.
- */
+import java.util.ArrayList;
+
 public class MenuModule implements Module {
+    private ArrayList<GuiButton> buttonList = new ArrayList<GuiButton>();
 
     @Override
     public void init() {
@@ -19,7 +20,13 @@ public class MenuModule implements Module {
 
     @Override
     public void show() {
+        initGui();
+    }
 
+    private void initGui() {
+        buttonList.clear();
+
+        buttonList.add(new GuiButton("Test", 100, 60, 100, 100));
     }
 
     @Override
